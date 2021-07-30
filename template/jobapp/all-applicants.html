@@ -1,8 +1,5 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block content %}
-<section class="section-hero overlay inner-page bg-image" style="background-image: url('{% static 'images/hero_1.jpg' %}');"
-    id="home-section">
+{% extends 'base.html' %} {% load static %} {% block content %}
+<section class="section-hero overlay inner-page bg-image" style="background-image: url('{% static 'images/slide01.jpg' %}');" id="home-section">
     <div class="container">
         <div class="row">
             <div class="col-md-7">
@@ -30,20 +27,18 @@
                                     <th>Job Title</th>
                                     <th>Applied Date</th>
                                     <th>View </th>
-                        
+
                                 </tr>
                             </thead>
                             <tbody>
-                                {% for applicant in all_applicants %}
-                        {{ applicant.get_total_applicant }}
+                                {% for applicant in all_applicants %} {{ applicant.get_total_applicant }}
 
                                 <tr>
-                                    <td class="text-center"><a href="">{{ applicant.user.get_full_name }}</a></td     >
+                                    <td class="text-center"><a href="">{{ applicant.user.get_full_name }}</a></td>
                                     <td>{{ applicant.job.title }}</td>
                                     <td>{{ applicant.timestamp }}</td>
                                     <td>
-                                        <a class="btn btn-info btn-sm" href="{% url 'jobapp:applicant-details' applicant.user.id %}"
-                                                role="button">
+                                        <a class="btn btn-info btn-sm" href="{% url 'jobapp:applicant-details' applicant.user.id %}" role="button">
                                             Click
                                         </a>
                                     </td>

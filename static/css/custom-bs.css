@@ -6938,7 +6938,8 @@ a.close.disabled {
     transition: -webkit-transform 0.6s ease-in-out;
     -o-transition: transform 0.6s ease-in-out;
     transition: transform 0.6s ease-in-out;
-    transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out
+    transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
+    filter: opacity(60%);
 }
 
 @media (prefers-reduced-motion:reduce) {
@@ -10346,6 +10347,10 @@ button.bg-dark:hover {
     .my-xl-5 {
         margin-top: 3rem!important
     }
+    .mt-xl-9,
+    .my-xl-9 {
+        margin-top: 9rem!important
+    }
     .mr-xl-5,
     .mx-xl-5 {
         margin-right: 3rem!important
@@ -10675,7 +10680,7 @@ button.bg-dark:hover {
     text-transform: lowercase!important
 }
 
-.text-uppercase {
+.carousel-item {
     text-transform: uppercase!important
 }
 
@@ -10708,7 +10713,25 @@ button.bg-dark:hover {
 }
 
 .text-white {
-    color: #fff!important
+    color: #fff!important;
+}
+
+.text-custom {
+    color: #3C3B6E;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    font-weight: 1000;
+    font-size: 3rem;
+    font-family: Helvetica, sans-serif;
+}
+
+.text-custom_1 {
+    color: #B22234;
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+    font-weight: 1000;
+    font-size: 2.0rem;
+    font-family: Helvetica, sans-serif;
 }
 
 .text-primary {
